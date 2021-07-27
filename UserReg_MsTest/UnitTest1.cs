@@ -15,8 +15,15 @@ namespace UserReg_MsTest
         [TestMethod]
         public void FirstNameTest()
         {
-            string name = "Vbnreddy";
+            string name = "Vallem";
             bool result = program.FirstNameVal(name);
+            Assert.AreEqual(true, result);
+        }
+        [TestMethod]
+        public void LastNameTest()
+        {
+            string name = "Balu";
+            bool result = program.LastNameVal(name);
             Assert.AreEqual(true, result);
         }
     }
