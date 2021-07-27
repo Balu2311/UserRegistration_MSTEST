@@ -33,5 +33,12 @@ namespace UserReg_MsTest
             bool result = program.EmailValidation(email);
             Assert.AreEqual(true, result);
         }
+        [TestMethod]
+        public void MobileTest()
+        {
+            string mobile = "91 9492407489";
+            bool result = program.MobileValidation(mobile);
+            Assert.AreEqual(true, result);
+        }
     }
 }
