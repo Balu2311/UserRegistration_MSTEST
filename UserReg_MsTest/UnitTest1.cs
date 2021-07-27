@@ -43,7 +43,7 @@ namespace UserReg_MsTest
         [TestMethod]
         public void PasswordTest()
         {
-            string password = "vbnreddys";
+            string password = "Vbnreddys";
             bool result = program.PasswordRule(password);
             Assert.AreEqual(true, result);
         }
