@@ -16,6 +16,9 @@ namespace UserRegistration_MsTest
             Console.Write("Enter Last Name: ");
             string LastName = Console.ReadLine();
             Console.WriteLine(p.LastNameVal(LastName));
+            Console.Write("Enter E-mail : ");
+            string Email = Console.ReadLine();
+            Console.WriteLine(p.EmailValidation(Email));
         }
         public bool FirstNameVal(string first_name)
         {
@@ -26,6 +29,13 @@ namespace UserRegistration_MsTest
         {
             Regex rg = new Regex(REGEX_PATTERN);
             bool validate = rg.IsMatch(last_name);
+            return validate;
+        }
+        public bool EmailValidation(string email)
+        {
+            string EMAIL_PATTERN = "^[a-zA-Z0-9]+[.(a-zA-Z0-9)]*(\\@)[a-zA-Z0-9]+(\\.)[a-z]{2,3}[.(a-z)]*$";
+            Regex rg = new Regex(EMAIL_PATTERN);
+            bool validate = rg.IsMatch(email);
             return validate;
         }
     }

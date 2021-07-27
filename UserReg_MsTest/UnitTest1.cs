@@ -26,5 +26,12 @@ namespace UserReg_MsTest
             bool result = program.LastNameVal(name);
             Assert.AreEqual(true, result);
         }
+        [TestMethod]
+        public void EmailTest()
+        {
+            string email = "vbn.reddy@gmail.com.in";
+            bool result = program.EmailValidation(email);
+            Assert.AreEqual(true, result);
+        }
     }
 }
