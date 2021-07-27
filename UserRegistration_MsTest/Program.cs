@@ -22,6 +22,9 @@ namespace UserRegistration_MsTest
             Console.Write("Enter Mobile_NO: ");
             string mobile = Console.ReadLine();
             Console.WriteLine(p.MobileValidation(mobile));
+            Console.Write("Enter Password : ");
+            string password = Console.ReadLine();
+            Console.WriteLine(p.PasswordRule(password));
         }
         public bool FirstNameVal(string first_name)
         {
@@ -46,6 +49,13 @@ namespace UserRegistration_MsTest
             string MobilePattern = "^(91){1}[ ]+[0-9]{10}$";
             Regex rg = new Regex(MobilePattern);
             bool validate = rg.IsMatch(mobile);
+            return validate;
+        }
+        public bool PasswordRule(string password)
+        {
+            string PasswordPattern = "^[a-zA-Z0-9].{8,}$";
+            Regex rg = new Regex(PasswordPattern);
+            bool validate = rg.IsMatch(password);
             return validate;
         }
     }

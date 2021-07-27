@@ -40,5 +40,12 @@ namespace UserReg_MsTest
             bool result = program.MobileValidation(mobile);
             Assert.AreEqual(true, result);
         }
+        [TestMethod]
+        public void PasswordTest()
+        {
+            string password = "vbnreddys";
+            bool result = program.PasswordRule(password);
+            Assert.AreEqual(true, result);
+        }
     }
 }
