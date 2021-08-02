@@ -24,9 +24,7 @@ namespace UserRegistration_MsTest
             Console.Write("Enter Password : ");
             string password = Console.ReadLine();
             Console.WriteLine(regex.PasswordRule(password));
-            Console.Write("Enter Message: ");
-            string Message = Console.ReadLine();
-            Console.WriteLine(regex.PasswordRule(Message));
+            
         }
     }
 }

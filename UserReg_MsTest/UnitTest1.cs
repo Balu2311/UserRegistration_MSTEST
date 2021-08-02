@@ -65,5 +65,12 @@ namespace UserReg_MsTest
             var Result = reg.MessageCheck("Happy");
             Assert.AreEqual(true, Result);
         }
+        [TestMethod]
+        public void MultipleEmailTest()
+        {
+            var Result = reg.CheckMultipleEmail("vbn@gmail.com", "vbn.vbn@gmail.com", "vbn234@gmail.com");
+            string check = "succesfull";
+            Assert.AreEqual(check, Result);
+        }
     }
 }
